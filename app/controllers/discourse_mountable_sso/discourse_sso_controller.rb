@@ -10,8 +10,7 @@ module DiscourseMountableSso
       current_user = get_current_user 
       sso = request.query_string =="" ? SingleSignOn.parse(session[:discourse_mountable_sso][:query_string] , secret) : SingleSignOn.parse(request.query_string, secret)
       # binding.pry
-      sso.avatar_url = current_user.avatar.url
-      sso.avatar_force_update = true
+      sso.avatar_url = ("http:" + current_user.avatar.url)
       sso.email = current_user.email 
       sso.name = current_user.name 
       sso.username = current_user.email
