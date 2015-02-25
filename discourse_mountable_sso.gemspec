@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = DiscourseMountableSso::VERSION
   s.authors     = ["Mohamed N.Salah"]
   s.email       = ["mohamednasser@usytech.com"]
-  s.homepage    = "Home Page"
+  s.homepage    = ""
   s.summary     = "Summary of DiscourseMountableSso."
   s.description = "Description of DiscourseMountableSso."
 

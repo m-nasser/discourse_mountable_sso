@@ -32,17 +32,10 @@ class ApplicationController < ActionController::Base
 		User.find session[:user_id]
 	end
 
-  # def set_login_path url
-  #   session[:discourse_mountable_sso] = {login_path: url+"session/sso_login"}    
-  # end
-
-  def your_discourse_url
-    "http://local:4000/"
-  end
   
   def login_url
     # return session[:discourse_mountable_sso][:login_path]
-    return your_discourse_url+"session/sso_login"
+    return "http://local:4000/session/sso_login"
   end
 
   #This method for prevent user to access Signup & Login Page without logout
