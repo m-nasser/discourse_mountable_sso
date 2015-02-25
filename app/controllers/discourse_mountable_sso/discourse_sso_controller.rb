@@ -16,8 +16,8 @@ module DiscourseMountableSso
       sso.username = current_user.email
       sso.external_id = current_user.id
       sso.sso_secret = secret
-
-      redirect_to sso.to_url("http://local:4000//session/sso_login")
+      
+      redirect_to sso.to_url(login_url)
     end
 
     def authenticate_user

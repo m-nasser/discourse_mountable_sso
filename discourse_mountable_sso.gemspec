@@ -7,11 +7,11 @@ require "discourse_mountable_sso/version"
 Gem::Specification.new do |s|
   s.name        = "discourse_mountable_sso"
   s.version     = DiscourseMountableSso::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of DiscourseMountableSso."
-  s.description = "TODO: Description of DiscourseMountableSso."
+  s.authors     = ["Mohamed N.Salah"]
+  s.email       = ["mohamednasser@usytech.com"]
+  s.homepage    = "Home Page"
+  s.summary     = "Summary of DiscourseMountableSso."
+  s.description = "Description of DiscourseMountableSso."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
