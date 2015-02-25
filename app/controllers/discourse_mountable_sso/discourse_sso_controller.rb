@@ -11,7 +11,7 @@ module DiscourseMountableSso
       sso = request.query_string =="" ? SingleSignOn.parse(session[:discourse_mountable_sso][:query_string] , secret) : SingleSignOn.parse(request.query_string, secret)
       # binding.pry
       sso.email = current_user.email 
-      sso.name = current_user.username 
+      sso.name = current_user.name 
       sso.username = current_user.email
       sso.external_id = current_user.id
       sso.sso_secret = secret
