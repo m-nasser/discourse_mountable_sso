@@ -25,8 +25,11 @@ class SessionsController < ApplicationController
 			session[:user_id] = authorized_user.id
 			flash[:notice] = "Wow Welcome again, you logged in as #{authorized_user.username}"
 			# binding.pry
+
 			if session[:return_to]
-				redirect_to session[:return_to]
+				url = session[:return_to]
+				session[:return_to] = nil
+				redirect_to url
 			else
 				redirect_to(:action => 'home')
 			end

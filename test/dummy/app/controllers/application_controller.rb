@@ -23,17 +23,17 @@ class ApplicationController < ActionController::Base
 	def return_to_url path
 		session[:return_to] = path	
 	end
-
-  def free_return_to
-    session[:return_to] = nil
-  end
 	
   def get_current_user 
 		User.find session[:user_id]
 	end
 
   
-  def login_url
+  def login_path
+    main_app.login_path   
+  end
+
+  def discourse_return_url
     # return session[:discourse_mountable_sso][:login_path]
     return "http://local:4000/session/sso_login"
   end
