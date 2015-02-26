@@ -6,7 +6,8 @@ module DiscourseMountableSso
     before_filter :authenticate_user # ensures user must login
 
     def sso
-      secret = "83IC~q<ITI#15n(6f515sw5crA?lF&"
+      # secret = "83IC~q<ITI#15n(6f515sw5crA?lF&"
+      secret = DiscourseSSO.configuration.secret  
       current_user = get_current_user 
       sso = request.query_string =="" ? SingleSignOn.parse(session[:discourse_mountable_sso][:query_string] , secret) : SingleSignOn.parse(request.query_string, secret)
       # binding.pry
