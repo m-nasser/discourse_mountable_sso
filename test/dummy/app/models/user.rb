@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
 
   before_save :encrypt_password
   after_save :clear_password
-
+  attr_accessible :username, :email, :password, :password_confirmation
   validates :username, :presence => true, :uniqueness => true, :length => { :in => 3..20 }
   validates :password, :confirmation => true
   validates_length_of :password, :in => 6..20, :on => :create
