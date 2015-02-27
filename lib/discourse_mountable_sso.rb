@@ -2,7 +2,10 @@ require "discourse_mountable_sso/engine"
 require "discourse_mountable_sso/configuration"
 
 module DiscourseMountableSso
-	def self.configuration
+	attr_writer :configuration
+	
+	def configuration
 		@configuration ||= Configuration.new
-	end 
+	end
+	module_function :configuration
 end

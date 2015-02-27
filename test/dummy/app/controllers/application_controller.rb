@@ -16,6 +16,19 @@ class ApplicationController < ActionController::Base
   	end
   end
 
+  def get_discourse_data
+    current_user = User.find session[:user_id] if session[:user_id]
+    discourse_data = {}
+    if current_user
+      discourse_data[:avatar_url] = "http://ftp.lemoow.com/avatars/1/original/_D8_AC.jpg"
+      discourse_data[:email] = current_user.email
+      discourse_data[:name] = current_user.username
+      discourse_data[:username] = current_user.username
+      discourse_data[:external_id] = current_user.id
+    end
+    discourse_data
+  end
+
 	def logged_in?
 		session[:user_id].present?
 	end
@@ -24,19 +37,6 @@ class ApplicationController < ActionController::Base
 		session[:return_to] = path	
 	end
 	
-  def get_current_user 
-		User.find session[:user_id]
-	end
-
-  
-  def login_path
-    main_app.login_path   
-  end
-
-  def discourse_return_url
-    # return session[:discourse_mountable_sso][:login_path]
-    return "http://local:4000/session/sso_login"
-  end
 
   #This method for prevent user to access Signup & Login Page without logout
   def save_login_state
