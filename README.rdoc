@@ -1,3 +1,4 @@
 = DiscourseMountableSso
 
 Discourse Mountable Sso is a moutable engine made to handle [Discourse](https://github.com/discourse/discourse/).
+By [Plataformatec](http://plataformatec.com.br/).
