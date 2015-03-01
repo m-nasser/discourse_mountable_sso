@@ -35,12 +35,12 @@ DiscourseMountableSso.configuration.store_return_to_url_method = <RETURN_TO_URL_
 * store_return_to_url_method : Is a method to store the return_to path as after the user log-in in your app it'll be redirected back to discourse server.
 
 ##Notes: 
-  * We use a cookie named [:discourse_mountable_sso][:query_string]
-  * Adjust your login method to check if you stored a return_to using ``` store_return_to_url_method ``` to redirect to this url.
   * Add this route to your routes.rb file   
    ```ruby
    mount DiscourseMountableSso::Engine => "/discourse_mountable_sso"
    ```
+  * We use a cookie named [:discourse_mountable_sso][:query_string]
+  * Adjust your login method to check if you stored a return_to using ``` store_return_to_url_method ``` to redirect to this url.
 
    
 
