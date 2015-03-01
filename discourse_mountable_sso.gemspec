@@ -9,15 +9,13 @@ Gem::Specification.new do |s|
   s.version     = DiscourseMountableSso::VERSION
   s.authors     = ["Mohamed N.Salah"]
   s.email       = ["mohamednasser@usytech.com"]
-  s.homepage    = ""
-  s.summary     = "Summary of DiscourseMountableSso."
-  s.description = "Description of DiscourseMountableSso."
+  s.homepage    = "https://rubygems.org/gems/discourse_mountable_sso"
+  s.summary     = "Discourse Mountable Sso is a mountable engine made to handle Discourse single sign on technique"
+  s.description = "Discourse Mountable Sso is a mountable engine made to handle Discourse single sign on technique,it works with Rails 3.2.14"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "rails", "~> 3.2.14"
-  # s.add_dependency "jquery-rails"
+  s.add_dependency 'rails', '~> 3.2', '>= 3.2.14'
 
-  s.add_development_dependency "sqlite3"
 end
