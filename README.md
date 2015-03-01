@@ -36,7 +36,10 @@ DiscourseMountableSso.configuration.store_return_to_url_method = <RETURN_TO_URL_
 
 ##Notes: 
   * We use a cookie named [:discourse_mountable_sso][:query_string]
-  * Add this route to your routes.rb file   mount DiscourseMountableSso::Engine => "/discourse_mountable_sso"
+  * Add this route to your routes.rb file   
+```ruby
+mount DiscourseMountableSso::Engine => "/discourse_mountable_sso"
+```
   * Adjust your login method to check if you stored a return_to using "store_return_to_url_method" to redirect to    this url.
    
 
