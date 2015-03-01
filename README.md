@@ -35,7 +35,8 @@ DiscourseMountableSso.configuration.store_return_to_url_method = <RETURN_TO_URL_
 * store_return_to_url_method : Is a method to store the return_to path as after the user log-in in your app it'll be redirected back to discourse server.
 
 ##Notes: 
-  * Add this route to your routes.rb file   
+  * Add this route to your routes.rb file  
+  
    ```ruby
    mount DiscourseMountableSso::Engine => "/discourse_mountable_sso"
    ```
