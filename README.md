@@ -1,6 +1,6 @@
 # DiscourseMountableSso
 
-Discourse Mountable Sso is a mountable engine made to handle [Discourse](https://github.com/discourse/discourse/). single sign on technique,all you have to do is to configure your application .
+Discourse Mountable Sso is a mountable engine made to handle [Discourse](https://github.com/discourse/discourse/) single sign on technique.
 
 ##Getting started
 
