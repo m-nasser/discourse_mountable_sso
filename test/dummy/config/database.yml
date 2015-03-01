@@ -12,10 +12,10 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: User_Auth_development
+  database: user_auth_development
   pool: 5
-  username: root
-  password: root
+  username: bionuc
+  password: bionuc
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -25,10 +25,10 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: User_Auth_test
+  database: user_auth_test
   pool: 5
-  username: root
-  password: root
+  username: bionuc
+  password: bionuc
   socket: /tmp/mysql.sock
 
 production:
