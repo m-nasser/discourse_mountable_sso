@@ -4,7 +4,7 @@ Discourse Mountable Sso is a mountable engine made to handle [Discourse](https:/
 
 ##Getting started
 
-Discourse mountable sso 0.0.1 works with Rails 3.2.14 . You can add it to your Gemfile with:
+Discourse mountable sso 0.0.2 works with Rails 3.2.14 . You can add it to your Gemfile with:
 
 ```ruby
 gem 'discourse_mountable_sso'
