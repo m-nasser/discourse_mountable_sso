@@ -1,3 +1,6 @@
 = DiscourseMountableSso
 
-This project rocks and uses MIT-LICENSE.
+First you need to create a file in config/initializers in your application name discourse_config.rb
+```ruby
+gem 'discourse_mountable_sso'
+```
