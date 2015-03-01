@@ -1,4 +1,4 @@
-# DiscourseMountableSso
+# Discourse Mountable Sso
 
 Discourse Mountable Sso is a mountable engine made to handle [Discourse](https://github.com/discourse/discourse/) single sign on technique.
 
@@ -34,7 +34,7 @@ DiscourseMountableSso.configuration.store_return_to_url_method = <RETURN_TO_URL_
 * logged_in_check_method : Is a method to check if the user is logged in or not and returns true or false.
 * store_return_to_url_method : Is a method to store the return_to path as after the user log-in in your app it'll be redirected back to discourse server.
 
-##Note: 
+##Notes: 
   * We use a cookie named [:discourse_mountable_sso][:query_string]
   * Add this route to your routes.rb file   mount DiscourseMountableSso::Engine => "/discourse_mountable_sso"
   * Adjust your login method to check if you stored a return_to using "store_return_to_url_method" to redirect to    this url.
