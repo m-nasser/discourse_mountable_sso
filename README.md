@@ -16,6 +16,7 @@ After you install Discourse mountable sso and add it to your Gemfile, you need t
 
 
 ```ruby
+#config/initializers/discourse_config.rb
 DiscourseMountableSso.configuration.secret = "#{SECRET}"
 DiscourseMountableSso.configuration.discourse_url = "#{DISCOURSE_URL}"	
 DiscourseMountableSso.configuration.login_path = "#{LOGIN_PATH}"
