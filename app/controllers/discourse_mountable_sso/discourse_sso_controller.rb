@@ -28,7 +28,7 @@ module DiscourseMountableSso
       return true if send @config.logged_in_check_method
         
       session[:discourse_mountable_sso] = {query_string: request.query_string}
-      send(@config.store_return_to_url, request.path)        
+      send(@config.store_return_to_url_method, request.path)        
       redirect_to @config.login_path
     end  
   end
