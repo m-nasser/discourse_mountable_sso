@@ -15,6 +15,7 @@ module DiscourseMountableSso
       discourse_data.each_pair {|k,v| sso.send("#{ k }=", v) }
 
       sso.sso_secret = @config.secret
+      yield sso if block_given?
       redirect_to sso.to_url("#{@config.discourse_url}/session/sso_login")
     end
 
